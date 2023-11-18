@@ -2,19 +2,38 @@
 
 > Source: <https://earthly.dev/blog/setup-typescript-monorepo/>
 
-Supporting workspaces, in `package.json` add:
+## Initial Setup
 
-```json
-"workspaces": [
-  "packages/*"
-]
-```
+Assuming the project folder is `demo`
+
+1. Create folders:
+
+    ```bash
+    export PROJ_FOLDER=demo
+    mkdir -p $PROJ_FOLDER/src
+    mkdir -p $PROJ_FOLDER/packages
+    ```
+
+2. Initialize NPM:
+
+    ```bash
+    cd $PROJ_FOLDER
+    npm init -y
+    ```
+
+3. To support workspaces, in `package.json` add:
+
+    ```json
+    "workspaces": [
+      "packages/*"
+    ]
+    ```
 
 ## Supporting TypeScript
 
 ```bash
 npm install typescript
-npm install --save-dev @types/node ts-node 
+npm install --save-dev @types/node ts-node
 npm install --save-dev eslint prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 
