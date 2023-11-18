@@ -22,5 +22,9 @@
     {
       "path": "./packages/ui"
     }
-  ]
+  ],
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  }
 }

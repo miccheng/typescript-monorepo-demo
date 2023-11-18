@@ -61,20 +61,24 @@ Add `tsconfig.json` to configure how the TypeScript files are compiled
 
 ```json
 {
-    "compilerOptions": {
-        "target": "es2022",
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "declaration": true,
-        "strict": true,
-        "incremental": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-        "rootDir": "./src",
-        "outDir": "./build",
-        "composite": true
-    }
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": true,
+    "strict": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "rootDir": "./src",
+    "outDir": "./build",
+    "composite": true
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  }
 }
 ```
 
@@ -127,7 +131,11 @@ Add build script:
     {
       "path": "./packages/utils"
     }
-  ]
+  ],
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  }
 }
 ```
 
